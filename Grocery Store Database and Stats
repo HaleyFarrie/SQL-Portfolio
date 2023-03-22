@@ -1,0 +1,40 @@
+# SQL
+SQL Portfolio
+--Create a grocery store database
+/** Walmart Store List **/
+
+CREATE TABLE Walmart ( id INTEGER PRIMARY KEY, name TEXT, cost INTEGER, quantity INTEGER, aisle INTEGER);
+
+INSERT INTO Walmart Values (1, "Milk", 3.50, 70, 1);
+INSERT INTO Walmart Values (2, "Bread", 3.00, 100, 2);
+INSERT INTO Walmart Values (3, "Butter", 3.00, 70, 1);
+INSERT INTO Walmart Values (4, "Yogurt", 5.99, 30, 1);
+INSERT INTO Walmart Values (5, "Cheese", 6.50, 25, 1);
+INSERT INTO Walmart Values (6, "Eggs", 5.50, 25, 1); 
+INSERT INTO Walmart Values (7, "Sugar", 4.00, 15, 5);
+INSERT INTO Walmart Values (8, "Flour", 3.00, 12, 5); 
+INSERT INTO Walmart Values (9, "Pants", 20.00, 15, 10);
+INSERT INTO Walmart Values (10, "Shirts", 17.00, 10, 10); 
+INSERT INTO Walmart Values (11, "Socks", 20.00, 10, 10); 
+INSERT INTO Walmart Values (12, "Shoes", 25.00, 10, 10); 
+INSERT INTO Walmart Values (13, "Mangos", 1.50, 10, 3);
+INSERT INTO Walmart Values (14, "Bannanas", 3.00, 10, 3);
+INSERT INTO Walmart Values (15, "Walnuts", 7.00, 10, 4); 
+
+--Create a grocery store database
+
+Select * FROM Walmart;
+
+Select * FROM Walmart ORDER BY cost;
+
+--what is the total quantity by aisle? 
+
+Select aisle, SUM(quantity) from Walmart GROUP BY aisle;
+
+--what is the average quantity of all items in the store database? 
+
+Select AVG(quantity) from Walmart;
+
+--what is the average cost of the items in the store database? 
+
+Select AVG(cost) from Walmart
